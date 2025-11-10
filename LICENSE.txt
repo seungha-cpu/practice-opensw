@@ -1,0 +1,2 @@
+The Mit LICENSE (MIT)
+copyright (C) 2024 opensw-geek
