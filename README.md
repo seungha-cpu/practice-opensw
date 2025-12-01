@@ -10,13 +10,18 @@
 
 
 # 2. 리눅스
+> 아래 내용은 **Ubuntu**기준으로 작성되었음  
+> ~~_여러줄_~~    
+>  
+> <ins><b><i>여러줄</i></b></ins>
+- /있으면 닫기 없으면 열기
 ## 2.1 명령어 종류
 1. 파일관리 : : `ls`, `cd`, `mkdir`, `rmdir`, `touch`, `vi`, `cat`, `mv`, `rm`, `find`
 2. 쉘 : `chsh`, `echo`, `export`, `alias`, `unalias`, `history`
 3. 파일 엑세스 관리 : `chmod`, `umask`, `chown`
 4. 패키지 관리 :  
 | 기능               | apt 형식        | apt-get / apt-cache 형식 |
-|------------------|----------------|-------------------------|
+|:---:|:---:|:---:|
 | 패키지 검색        | apt search     | apt-cache search         |
 | 패키지 정보 검색   | apt show       | apt-cache show           |
 | 패키지 정보 업데이트 | apt update     | apt-get update           |
