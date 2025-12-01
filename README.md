@@ -72,3 +72,28 @@ git merge <remote> <branch>
  |/
  * b2f6043 (main) Need to a new function
 ```
+
+- [x] A implement
+- [ ] B implement
+- [ ] C implement
+
+``` mermaid
+sequenceDiagram
+    participant U as 사용자
+    participant L as 로그인 서비스
+    participant DB as 데이터베이스
+
+    U->>L: 1. 로그인 요청 (ID, PW 전송)
+    L->>DB: 2. ID로 사용자 정보 조회
+    DB-->>L: 3. 사용자 정보 반환
+    alt 사용자 정보가 존재하고 비밀번호가 일치하면
+        L->>L: 4. 세션/토큰 생성
+        L-->>U: 5. 로그인 성공 응답 (세션/토큰 포함)
+    else 비밀번호 불일치
+        L-->>U: 5. 로그인 실패 응답 (비밀번호 오류)
+    else 사용자 정보 없음
+        L-->>U: 5. 로그인 실패 응답 (ID 없음)
+    end
+    U->>L: 6. 다음 페이지 요청 (세션/토큰 사용)
+    L-->>U: 7. 페이지 데이터 응답
+```
